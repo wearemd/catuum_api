@@ -33,6 +33,7 @@ defmodule CatuumApi.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:exredis, "~> 0.2.4"},
-     {:cors_plug, "~> 1.1.2"}]
+     {:cors_plug, "~> 1.1.2"},
+     {:exrm, "~> 1.0.6"}]
   end
 end
