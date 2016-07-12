@@ -17,7 +17,7 @@ defmodule CatuumApi.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {CatuumApi, []},
-     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :exredis, :cors_plug]]
+     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :exredis, :cors_plug, :mogrify]]
   end
 
   # Specifies which paths to compile per environment.
