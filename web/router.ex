@@ -2,7 +2,7 @@ defmodule CatuumApi.Router do
   use CatuumApi.Web, :router
 
   pipeline :browser do
-    plug :accepts, ["html"]
+    plug :accepts, ["html", "json"]
     plug :fetch_session
     plug :fetch_flash
     plug :protect_from_forgery
@@ -12,6 +12,7 @@ defmodule CatuumApi.Router do
   scope "/", CatuumApi do
     pipe_through :browser
 
+    get "/cats/:count", CatsController, :count
     get "/cats", CatsController, :index
   end
 end

@@ -20,6 +20,19 @@ defmodule CatuumApi.Cat do
     end
   end
 
+  def random(count) do
+    filenames = Repo.srandmember([@small_cats_key, count])
+
+
+    filenames |> Enum.map(fn(filename) -> 
+      ext = Path.extname(filename) |> String.replace(".", "")
+      %{
+        path: @uploads_path <> "/" <> filename,
+        content_type: "image/" <> ext
+      }
+    end)
+  end
+
   def random do
     filename = Repo.srandmember(@small_cats_key)
     ext      = Path.extname(filename) |> String.replace(".", "")
