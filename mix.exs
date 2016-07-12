@@ -3,7 +3,7 @@ defmodule CatuumApi.Mixfile do
 
   def project do
     [app: :catuum_api,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.2",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
@@ -34,6 +34,7 @@ defmodule CatuumApi.Mixfile do
      {:cowboy, "~> 1.0"},
      {:exredis, "~> 0.2.4"},
      {:cors_plug, "~> 1.1.2"},
-     {:exrm, "~> 1.0.6"}]
+     {:exrm, "~> 1.0.6"},
+     {:mogrify, "~> 0.3.1"}]
   end
 end
