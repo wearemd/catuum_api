@@ -13,7 +13,10 @@ defmodule CatuumApi.Endpoint do
 
    # Serve cats from "uploads/" directory
   plug Plug.Static,
-    at: "/uploads", from: "uploads/", gzip: false
+    at: "/uploads", from: "uploads/", gzip: false,
+    headers: [
+      {"access-control-allow-origin", "*"}
+    ]
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
